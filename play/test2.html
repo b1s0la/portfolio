@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exam</title>
+</head>
+	<style type="text/css">
+		html, body{
+			display: flex;
+			align-items: center;
+			align-content: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: relative;
+			animation-name: example;
+			animation-duration: 10s; 
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+		@keyframes example{
+			0%{
+				background: red;
+				left: 0px;
+				top: 0px;
+			}
+			25%{
+				background: yellow;
+				left: 200px;
+				top: 0px;
+			}
+			50%{
+				background: pink;
+				left: 200px;
+				top: 200px;
+			}
+			75%{
+				background: green;
+				left: 0px;
+				top: 200px;
+			}
+			100%{
+				background: blue;
+				left: 0px;
+				top: 0px;
+			}
+		}
+	</style>
+<body>
+	<div></div>
+</body>
+</html>

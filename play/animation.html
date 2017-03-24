@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animation</title>
+</head>
+	<style type="text/css">
+		html, body{
+			display: flex;
+			align-items: center;
+			align-content: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+		}
+		.stage{
+			background: #eaeaed;
+			border-radius: 6px;
+			height: 150px;
+			position: relative;
+			width: 538px;
+		}
+		.ball{
+			background: #2DB34A;
+			border-radius: 50%;
+			height: 50px;
+			width: 50px;
+			margin: 0px;
+			position: absolute;
+		}
+		.stage:hover .ball{
+			animation: slide 2s ease-in;
+			animation-delay: 0.5s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate-reverse;
+		}
+		@keyframes slide{
+			0%{
+				left: 0;
+				top: 0;
+
+			}
+			50%{
+				left: 244px;
+				top: 100px;
+			}
+			100%{
+				left: 488px;
+				top: 0px;
+			}
+		}
+		.stage:active .ball{
+			animation-play-state: paused;
+		}
+
+			/*.box{
+			background: #2db34a;
+			width: 50px;
+			height: 50px;
+			border-radius: 6px;
+			transition: background 5s eases;
+		}
+		.box:hover{
+			background: #ff7b29;
+		}
+		.rect{
+			height: 50px;
+			width: 200px;
+		}
+		.rect: nth-child(1){
+			background: #bada55;
+			transition: width 3s ease
+		}
+		.rect: nth-child(2){
+			background: #2DB34A;
+			transition: width 3s linear
+		}
+		.rect: nth-child(3){
+			background: #FF0000;
+			transition: width 3s ease-in-out
+		}
+		.rect: nth-child(4){
+			background: #CD7F32;
+			transition: width 3s ease-in
+		}
+		.container:hover.rect{
+			width: 800px;
+		}
+	</style>
+<body>
+	<!--<div class="box">
+	</div>
+	<div class="container">
+		<div class="rect">
+			EASE
+		</div>
+		<div class="rect">
+			LINEAR
+		</div>
+		<div class="rect">
+			EASE-IN-OUT
+		</div>
+		<div class="rect">
+			EASE-IN
+		</div>
+	
+</div>-->
+
+	<div class="stage">
+		<figure class="ball"></figure>
+	</div>
+</body>
+</html>
